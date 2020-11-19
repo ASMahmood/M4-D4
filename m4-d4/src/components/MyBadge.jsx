@@ -5,9 +5,7 @@ const MyBadge = (props) => {
   return (
     <>
       {" "}
-      <Badge variant={props.color} className="mb-3">
-        {props.text}
-      </Badge>{" "}
+      <Badge variant={props.color}>{props.text}</Badge>{" "}
     </>
   );
 };

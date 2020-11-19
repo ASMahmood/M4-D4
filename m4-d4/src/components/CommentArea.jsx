@@ -1,18 +1,21 @@
 import React from "react";
-import { Card, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import AddComment from "./AddComment";
+import CommentList from "./CommentList";
 import "./CommentArea.css";
 
 class CommentArea extends React.Component {
-  state = {
-    selected: false,
-  };
-
   render() {
     return (
       <Container id="commentArea" className={this.props.className}>
         <Row>
-          <h1>{this.props.bookId}</h1>
-          <img src={this.props.bookImg} alt="" width="100%" />
+          <Col xs={6} className="offset-3">
+            <img src={this.props.bookImg} alt="" width="100%" />
+          </Col>
+        </Row>
+        <Row>
+          <CommentList bookId={this.props.bookId} />
+          <AddComment bookId={this.props.bookId} />
         </Row>
       </Container>
     );

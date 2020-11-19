@@ -18,7 +18,7 @@ class BookList extends React.Component {
   render() {
     return (
       <>
-        <Container>
+        <Container style={{ maxWidth: "60%" }}>
           <Row>
             <Col></Col>
           </Row>
