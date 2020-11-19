@@ -39,12 +39,15 @@ class SingleComment extends React.Component {
 
   render() {
     return (
-      <ListGroup.Item className=" w-100 d-flex justify-content-between align-items-center">
+      <ListGroup.Item
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.1)", borderRadius: "10px" }}
+        className=" w-100 d-flex justify-content-between align-items-center"
+      >
         <MyBadge
           color="success"
           text={this.props.commentObj.rate ? this.props.commentObj.rate : "ERR"}
         />{" "}
-        {this.props.commentObj.comment}
+        <p className="m-0 px-1">{this.props.commentObj.comment}</p>
         <Button onClick={(e) => this.removeComment(e)} variant="danger">
           X
         </Button>

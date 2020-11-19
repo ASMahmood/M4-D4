@@ -63,7 +63,7 @@ class AddComment extends React.Component {
         <h5>Add Comment:</h5>
         <Form onSubmit={this.submitComment}>
           <Row>
-            <Col xs={6}>
+            <Col xs={12}>
               <Form.Group>
                 <Form.Label htmlFor="comment">Comment:</Form.Label>
                 <Form.Control
@@ -77,6 +77,8 @@ class AddComment extends React.Component {
                 />
               </Form.Group>
             </Col>
+          </Row>
+          <Row className="align-items-center">
             <Col xs={6}>
               <Form.Group>
                 <Form.Label htmlFor="rate">Rating:</Form.Label>
@@ -96,10 +98,12 @@ class AddComment extends React.Component {
                 </Form.Control>
               </Form.Group>
             </Col>
+            <Col xs={6}>
+              <Button type="sumbit" variant="success" value="Submit">
+                Submit{" "}
+              </Button>
+            </Col>
           </Row>
-          <Button type="sumbit" variant="success" value="Submit">
-            Submit{" "}
-          </Button>
         </Form>
       </Container>
     );
